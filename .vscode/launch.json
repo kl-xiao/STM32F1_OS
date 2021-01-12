@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "cwd": "${workspaceRoot}",
+            "type": "cortex-debug",
+            "request": "launch",
+            "name": "openocd",
+            "servertype": "openocd",
+            "executable": ".\\build\\Debug\\STM32F1_OS.elf",
+            "runToMain": true,
+            "configFiles": [
+                "interface/<debugger-type>.cfg",
+                "target/<target-name>.cfg"
+            ]
+        }
+    ]
+}

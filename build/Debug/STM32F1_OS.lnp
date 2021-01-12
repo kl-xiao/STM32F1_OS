@@ -1,0 +1,32 @@
+-mthumb -mcpu=cortex-m3 --specs=nosys.specs --specs=nano.specs -Wl,--gc-sections -T "e:/VS Code Projects/FreeRtos/STM32F1_OS/STM32F103ZETx_FLASH.ld"
+-Wl,-Map=./build/Debug/STM32F1_OS.map
+-o ./build/Debug/STM32F1_OS.elf ./build/Debug/stm32f1xx_hal.o
+./build/Debug/stm32f1xx_hal_cortex.o
+./build/Debug/stm32f1xx_hal_dma.o
+./build/Debug/stm32f1xx_hal_exti.o
+./build/Debug/stm32f1xx_hal_flash.o
+./build/Debug/stm32f1xx_hal_flash_ex.o
+./build/Debug/stm32f1xx_hal_gpio.o
+./build/Debug/stm32f1xx_hal_gpio_ex.o
+./build/Debug/stm32f1xx_hal_pwr.o
+./build/Debug/stm32f1xx_hal_rcc.o
+./build/Debug/stm32f1xx_hal_rcc_ex.o
+./build/Debug/stm32f1xx_hal_tim.o
+./build/Debug/stm32f1xx_hal_tim_ex.o
+./build/Debug/stm32f1xx_hal_uart.o
+./build/Debug/cmsis_os.o
+./build/Debug/croutine.o
+./build/Debug/event_groups.o
+./build/Debug/list.o
+./build/Debug/port.o
+./build/Debug/heap_4.o
+./build/Debug/queue.o
+./build/Debug/stream_buffer.o
+./build/Debug/tasks.o
+./build/Debug/timers.o
+./build/Debug/freertos.o
+./build/Debug/main.o
+./build/Debug/stm32f1xx_hal_msp.o
+./build/Debug/stm32f1xx_it.o
+./build/Debug/system_stm32f1xx.o
+./build/Debug/startup_stm32f103xe.o -lm

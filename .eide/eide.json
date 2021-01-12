@@ -1,0 +1,112 @@
+{
+    "name": "STM32F1_OS",
+    "type": "ARM",
+    "mode": "Debug",
+    "toolchain": "GCC",
+    "dependenceList": [
+        {
+            "groupName": "custom",
+            "depList": [
+                {
+                    "name": "default",
+                    "incList": [
+                        ".\\.eide\\deps",
+                        ".\\User\\inc",
+                        ".\\Pro\\inc"
+                    ],
+                    "libList": [],
+                    "sourceDirList": [],
+                    "defineList": [
+                        "STM32F103xE",
+                        "USE_HAL_DRIVER"
+                    ]
+                }
+            ]
+        },
+        {
+            "groupName": "build-in",
+            "depList": [
+                {
+                    "name": "default",
+                    "incList": [],
+                    "libList": [],
+                    "sourceDirList": [],
+                    "defineList": [
+                        "DEBUG"
+                    ]
+                },
+                {
+                    "name": "toolchain",
+                    "incList": [
+                        ".\\..\\..\\..\\program files\\gcc-arm-none-eabi-10-2020\\arm-none-eabi\\include\\c++\\10.2.1",
+                        ".\\..\\..\\..\\program files\\gcc-arm-none-eabi-10-2020\\arm-none-eabi\\include\\c++\\10.2.1\\arm-none-eabi",
+                        ".\\..\\..\\..\\program files\\gcc-arm-none-eabi-10-2020\\arm-none-eabi\\include\\c++\\10.2.1\\backward",
+                        ".\\..\\..\\..\\program files\\gcc-arm-none-eabi-10-2020\\lib\\gcc\\arm-none-eabi\\10.2.1\\include",
+                        ".\\..\\..\\..\\program files\\gcc-arm-none-eabi-10-2020\\lib\\gcc\\arm-none-eabi\\10.2.1\\include-fixed",
+                        ".\\..\\..\\..\\program files\\gcc-arm-none-eabi-10-2020\\arm-none-eabi\\include"
+                    ],
+                    "sourceDirList": [],
+                    "libList": [],
+                    "defineList": []
+                }
+            ]
+        }
+    ],
+    "compileConfig": {
+        "cpuType": "Cortex-M3",
+        "floatingPointHardware": "default",
+        "useCustomScatterFile": true,
+        "scatterFilePath": ".\\STM32F103ZETx_FLASH.ld",
+        "storageLayout": {
+            "RAM": [
+                {
+                    "tag": "IRAM",
+                    "id": 1,
+                    "mem": {
+                        "startAddr": "0x20000000",
+                        "size": "0x5000"
+                    },
+                    "isChecked": true,
+                    "noInit": false
+                }
+            ],
+            "ROM": [
+                {
+                    "tag": "IROM",
+                    "id": 1,
+                    "mem": {
+                        "startAddr": "0x08000000",
+                        "size": "0x10000"
+                    },
+                    "isChecked": true,
+                    "isStartup": true
+                }
+            ]
+        },
+        "options": "null"
+    },
+    "uploader": "OpenOCD",
+    "srcDirs": [
+        ".\\.eide\\deps",
+        ".\\FreeRTOS",
+        ".\\Pro\\src",
+        ".\\User\\src",
+        ".\\Drivers"
+    ],
+    "excludeList": [],
+    "outDir": ".\\build",
+    "deviceName": null,
+    "packDir": null,
+    "uploadConfig": {
+        "bin": ".\\build\\Debug\\STM32F1_OS.hex",
+        "target": "stm32f1x",
+        "interface": "stlink",
+        "baseAddr": "0x08000000"
+    },
+    "miscInfo": {
+        "lastBuildTime": 1610422803117,
+        "uid": "60985ae4ebc64b29db5221a8f080df6b",
+        "lastTelTime": 1610348095474
+    },
+    "version": "1.0"
+}
